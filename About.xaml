@@ -5,22 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CEFMemeAlerts"
         mc:Ignorable="d"
-        Title="О программе" Height="350" Width="400"
+        Title="О программе" Height="370" Width="400"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
         Icon="/memealertsLogo.jpg">
     <Grid Margin="10">
         <StackPanel>
-            <Image Source="/darkSouls.png" Height="80" Width="80" Margin="0,0,0,10"/>
+            <Image Source="/darkSouls.png" Height="100" Width="100" Margin="0,0,0,10"/>
             <TextBlock Text="CEFMemeAlerts" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
             <TextBlock Text="Версия: 1.0.0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
             <TextBlock Text="Разработано: samSayona" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">Работает на технологиях: <Hyperlink NavigateUri="https://memealerts.com">MemeAlerts.com</Hyperlink></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">Работает на технологиях: <Hyperlink NavigateUri="https://memealerts.com" RequestNavigate="Hyperlink_RequestNavigate">MemeAlerts.com</Hyperlink></TextBlock>
             <TextBlock Text="Поставляется as-is" HorizontalAlignment="Center" Margin="0,5,0,0"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,15,0,0">
-                    <Hyperlink NavigateUri="https://twitch.tv/samsayona">Twitch канал</Hyperlink>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">Каналы разработчика:</TextBlock>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">
+                    <Hyperlink NavigateUri="https://twitch.tv/samsayona" RequestNavigate="Hyperlink_RequestNavigate">Twitch</Hyperlink>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Center" Margin="0,15,0,0">
-                    <Hyperlink NavigateUri="https://goodgame.ru/samsayona">GoodGame канал</Hyperlink>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">
+                    <Hyperlink NavigateUri="https://goodgame.ru/samsayona" RequestNavigate="Hyperlink_RequestNavigate">GoodGame</Hyperlink>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">
+                    <Hyperlink NavigateUri="https://t.me/samsayona_ch" RequestNavigate="Hyperlink_RequestNavigate">Telegram</Hyperlink>
             </TextBlock>
         </StackPanel>
     </Grid>

@@ -183,7 +183,6 @@
   <ItemGroup>
     <Resource Include="memealertsLogo.jpg" />
     <Resource Include="darkSouls.png" />
-    <Content Include="index.html" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
