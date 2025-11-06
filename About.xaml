@@ -1,0 +1,27 @@
+﻿<Window x:Class="CEFMemeAlerts.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CEFMemeAlerts"
+        mc:Ignorable="d"
+        Title="О программе" Height="350" Width="400"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+        Icon="/memealertsLogo.jpg">
+    <Grid Margin="10">
+        <StackPanel>
+            <Image Source="/darkSouls.png" Height="80" Width="80" Margin="0,0,0,10"/>
+            <TextBlock Text="CEFMemeAlerts" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center"/>
+            <TextBlock Text="Версия: 1.0.0" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock Text="Разработано: samSayona" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0">Работает на технологиях: <Hyperlink NavigateUri="https://memealerts.com">MemeAlerts.com</Hyperlink></TextBlock>
+            <TextBlock Text="Поставляется as-is" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,15,0,0">
+                    <Hyperlink NavigateUri="https://twitch.tv/samsayona">Twitch канал</Hyperlink>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Center" Margin="0,15,0,0">
+                    <Hyperlink NavigateUri="https://goodgame.ru/samsayona">GoodGame канал</Hyperlink>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

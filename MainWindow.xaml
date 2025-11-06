@@ -1,0 +1,41 @@
+﻿<Window x:Class="CEFMemeAlerts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CEFMemeAlerts"
+        xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable="d"
+        Title="CEFMemeAlerts" Width="400" Height="150"
+        ResizeMode="CanMinimize" Icon="/memealertsLogo.jpg">
+    <Grid>
+        <Menu Height="20" VerticalAlignment="Top">
+            <MenuItem Header="О программе" Click="MenuItem_Click"/>
+        </Menu>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 30, 0, 0" VerticalAlignment="Top">
+            <Label Content="Ссылка на MemeAlerts:" VerticalAlignment="Center" Height="25"/>
+            <TextBox x:Name="LinkBox" 
+                 Text="Введите URL адрес" 
+                 TextWrapping="NoWrap" 
+                 Width="230" 
+                 Height="25"
+                 VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 70, 0, 0" VerticalAlignment="Top">
+            <Button x:Name="StartButton" 
+                Content="Запустить мемесы" 
+                Width="130" 
+                Height="25" 
+                Margin="0,0,10,0"
+                Click="StartClick_Click"/>
+            <Button x:Name="StopButton" 
+                Content="Выключить мемесы" 
+                IsEnabled="False" 
+                Width="130" 
+                Height="25" 
+                Click="StopClick_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
