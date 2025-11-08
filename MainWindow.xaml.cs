@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace CEFMemeAlerts
@@ -26,6 +28,7 @@ namespace CEFMemeAlerts
         {
             if (Regex.IsMatch(LinkBox.Text.ToString(), @"^https:\/\/memealerts\.com\/r\/.*"))
             {
+                SaveLink(LinkBox.Text.ToString());
                 maw.Browser.Address = LinkBox.Text;
                 maw.Show();
                 StartButton.IsEnabled = false;
@@ -50,6 +53,15 @@ namespace CEFMemeAlerts
         {
             About about = new About();
             about.ShowDialog();
+        }
+
+        private void SaveLink(string link)
+        {
+            string path = "configFile";
+            if (!File.Exists(path) || File.ReadAllText(path) != link)
+            {
+                File.WriteAllText(path, link);
+            }
         }
     }
 }
