@@ -3,6 +3,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Shapes;
 
 namespace CEFMemeAlerts
 {
@@ -16,7 +17,21 @@ namespace CEFMemeAlerts
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
             Closed += MainWindow_Closed;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            string path = "configFile";
+            if (File.Exists(path) && !IsFileEmpty(path))
+                LinkBox.Text = File.ReadAllText(path);
+        }
+
+        private bool IsFileEmpty(string path)
+        {
+            FileInfo file = new FileInfo(path);
+            return file.Length == 0;
         }
 
         private void MainWindow_Closed(object sender, EventArgs e)
@@ -41,6 +56,15 @@ namespace CEFMemeAlerts
             }
         }
 
+        private void SaveLink(string link)
+        {
+            string path = "configFile";
+            if (!File.Exists(path) || File.ReadAllText(path) != link)
+            {
+                File.WriteAllText(path, link);
+            }
+        }
+
         private void StopClick_Click(object sender, RoutedEventArgs e)
         {
             maw.Browser.Address = "about:blank";
@@ -53,15 +77,6 @@ namespace CEFMemeAlerts
         {
             About about = new About();
             about.ShowDialog();
-        }
-
-        private void SaveLink(string link)
-        {
-            string path = "configFile";
-            if (!File.Exists(path) || File.ReadAllText(path) != link)
-            {
-                File.WriteAllText(path, link);
-            }
         }
     }
 }
