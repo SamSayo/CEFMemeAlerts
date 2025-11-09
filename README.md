@@ -1,37 +1,34 @@
 # CEFMemeAlerts
 
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-
 Это программа выводит MemeAlerts на рабочий стол поверх игр и приложений.
 
-## Table of Contents
-
+## Содержимое
+- [Требования](#Требования)
 - [Установка](#Установка)
 - [Использование](#Использование)
-- [Мейнтейнеры](#Мейнтейнеры)
-- [Contributing](#contributing)
-- [License](#license)
+- [Лицензия](#Лицензия)
+
+## Требования
+
+- Операционная система: Windows 10 или выше.
+- .NET Framework 4.7.2 (будет установлен в процессе установки, если отсутствует).
+- Доступ к интернету для получения мемов от MemeAlerts.
+- Минимальные аппаратные требования: Процессор 1 ГГц, 1 ГБ ОЗУ.
 
 ## Установка
 
-
+1. Скачать и установить .NET Framework 4.7.2.
+2. Скачать и установить последний CEFMemeAlerts из раздела Releases.
 
 ## Использование
 
-```sh
-```
+1. Запустить CEFMemeAlerts.exe
+2. Ввести URL источника MemeAlerts
+   - Откройте "Настройка OBS" в [стримерской MemeAlerts](https://memealerts.com/channel/obs) и скопируйте ссылку для OBS
+   - Вставьте ссылку для OBS в поле ввода ссылок в основном окне
+3. Нажмите кнопку "Запустить мемесы"
+4. Вы великолепны!
 
-## Мейнтейнеры
-
-[@samSayona](https://github.com/samSayona)
-
-## Contributing
-
-PRs accepted.
-
-Small note: If editing the README, please conform to the
-[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
-
-## License
+## Лицензия
 
 MIT © 2025 samSayona
